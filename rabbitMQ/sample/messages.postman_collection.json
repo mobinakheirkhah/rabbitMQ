@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "2733b9a2-82e6-4029-accc-7f29c732fc66",
+		"name": "messages",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33495367"
+	},
+	"item": [
+		{
+			"name": "direct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exchange\": \"direct-exchange\",\r\n    \"routingKey\": \"routing-a\",\r\n    \"messageData\": \"helloforqueueA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/producer/direct",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"producer",
+						"direct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fanout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exchange\": \"direct-exchange\",\r\n    \"routingKey\": \"routing-a\",\r\n    \"messageData\": \"helloAlllllll\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/producer/fanout",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"producer",
+						"fanout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exchange\": \"direct-exchange\",\r\n    \"routingKey\": \"routing-a\",\r\n    \"messageData\": \"helloAlllllll\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/producer/fanout",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"producer",
+						"fanout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "header",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "headerName",
+						"value": "headerOfQueueA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exchange\": \"header-exchange\",\r\n    \"routingKey\": \"routing-a\",\r\n    \"messageData\": \"helloooooo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/producer/header",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"producer",
+						"header"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
